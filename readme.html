@@ -368,7 +368,9 @@ code {
 <h1 id="reentry-mercury-mission-control-center">Reentry Mercury Mission Control Center</h1>
 <p>Manual version 0.67.0.1-git</p>
 <p>This manual isn't necessarily realistic, and is not crew-rated.</p>
-<h2 id="when-you-enter">When you enter</h2>
+<h2 id="information-for-the-pilot">Information for the pilot</h2>
+<p>Upon entering the capsule, press Escape, the Mission Control Live, change the server name etc, and optionally your name, press create room. When the log says &quot;room created&quot;, you can press escape again.</p>
+<h2 id="when-you-enter-mcc">When you enter MCC</h2>
 <p>When you enter, you will be looking at the capsule communicator position. For the benefit of this manual, we'll start-out with the CAPCOM-role, since that's where you'll be dropped by default.</p>
 <p><img src="images/capcom-recs.PNG" alt=""></p>
 <p>First, in the white rectangle, you'll see your sign. Whenever you're in a seat, the sign will tell you which seat you're in. Additionally, your position will show up in the chat.</p>
@@ -392,31 +394,36 @@ to both rooms at the same time if you want. In this example, the user is receivi
 <p><img src="images/flightdirector-recs.png" alt=""></p>
 <p>The flight-director mission-status (green rectangle) is special. It doesn't have an amber button (because if the flight-director doesn't know if they're there you've got bigger problems), and when you press the red button pre-launch you can halt the countdown.</p>
 <p>The red rectangle marks where the flight-director sees the status of each of the seats. In this case, all the seats were unoccupied and so all the lights are unlit. In case of an abort, the flight-director presses the abort-button, which lights the abort-light in the capsule.</p>
-<h3 id="f6-capcom">(F6) Capcom</h3>
+<h3 id="f6-capsule-communicator-capcom">(F6) CAPsule COMmunicator (CAPCOM)</h3>
 <p><img src="images/capcom-recs.png" alt=""></p>
-<h3 id="f7-spacecraft-systems">(F7) Spacecraft Systems</h3>
+<p>The CAPCOM is in charge of communicating with the capsule. Realistically, CAPCOM is the only person directly communicating with the capsule, everyone else talks to the capsule through them. CAPCOM can see the current progress of the flight, as well as having a monitor for seeing the launch-pad.</p>
+<h3 id="f7-spacecraft-systems-systems">(F7) Spacecraft SYSTEMS (SYSTEMS)</h3>
 <p><img src="images/spacecraft-systems-recs.png" alt=""></p>
-<h3 id="f8-spacecraft-environment">(F8) Spacecraft Environment</h3>
+<p>SYSTEMS is in charge of monitoring the spacecraft fuel and electrical systems, as well as the attitudes and the rate of change in the individual rotational axes. SYSTEMS shares the responsibility for consumables with <a href="#f8-spacecraft-environment-environment">ENVIRONMENT</a>.</p>
+<h3 id="f8-spacecraft-environment-environment">(F8) Spacecraft ENVIRONMENT (ENVIRONMENT)</h3>
 <p><img src="images/spacecraft-environment-recs.png" alt=""></p>
-<h3 id="f9-flight-dynamics-officer">(F9) Flight Dynamics Officer</h3>
+<p>ENVIRONMENT is the other half of the consumables, and is in charge of monitoring the primary and secondary O2 tanks, as well as the pressure and temperature of the cabin and suit.</p>
+<h3 id="f9-flight-dynamics-officer-fdofido">(F9) Flight Dynamics Officer (FDO/FIDO)</h3>
 <p><img src="images/flight-dynamics-officer-recs.png" alt=""></p>
-<h3 id="retrofire-controller">Retrofire controller</h3>
+<p>FIDO is in charge of monitoring the orbital parameters of the spacecraft.</p>
+<h3 id="retrofire-controller-retro">RETROfire controller (RETRO)</h3>
 <p><img src="images/retrofire-controller-recs.png" alt=""></p>
-<h3 id="network">Network</h3>
+<p>RETRO is in charge of getting the spacecraft down. If the mission has to be aborted in orbit, it's up to RETRO to reschedule the retrofire-time. This is done by increasing or decreasing the MET timestamp (hours, minutes, and seconds). To do this, RETRO pushes the buttons above (to increase) and below (to decrease), until they reach the wanted retro-time, then press SET to set it.</p>
+<h3 id="network-network">Network (NETWORK)</h3>
 <p><img src="images/network-recs.png" alt=""></p>
-<h3 id="missile-telemetry">Missile Telemetry</h3>
+<p>NETWORK is in chargee of managing the communications-network. If Australia out lacks the paper to run their teletype, and CAL lost their radar, it's up to NETWORK to make sure that's shown on the mains. This position is sometimes used by MCC-users humorously write or draw various things on the board.</p>
+<h3 id="missile-telemetry-telemetry">Missile TELEMETRY (TELEMETRY)</h3>
 <p><img src="images/missile-telemetry-recs.png" alt=""></p>
-<h3 id="range-safety-observer">Range Safety Observer</h3>
+<p>TELEMETRY is in charge of monitoring the ascent and state of of the booster, making sure the capsule safely gets into space (before vacating the seat). During launch, this means monitoring the pressure of the various chambers, as well as the velocities and altitude of the missile.</p>
+<h3 id="range-safety-observer-rso">Range Safety Observer (RSO)</h3>
 <p>Effectively INOP</p>
-<h3 id="support-control-coordinator">Support Control Coordinator</h3>
+<h3 id="support-control-coordinator-support">SUPPORT Control Coordinator (SUPPORT)</h3>
 <p>Effectively INOP</p>
-<h3 id="flight-surgeon">Flight Surgeon</h3>
+<h3 id="flight-surgeon-surgeon">Flight SURGEON (SURGEON)</h3>
 <p>Effectively INOP</p>
-<h3 id="spacecraft-environment">Spacecraft Environment</h3>
-<p><img src="images/spacecraft-environment-recs.png" alt=""></p>
-<h3 id="recovery">Recovery</h3>
+<h3 id="recovery">RECOVERY</h3>
 <p><img src="images/recovery-recs.png" alt=""></p>
-<p>Monitors above height sea-level for recovery</p>
+<p>Monitors above height sea-level for recovery.</p>
 
 </body>
 </html>

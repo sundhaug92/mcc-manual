@@ -52,55 +52,59 @@ The flight-director mission-status (green rectangle) is special. It doesn't have
 
 The red rectangle marks where the flight-director sees the status of each of the seats. In this case, all the seats were unoccupied and so all the lights are unlit. In case of an abort, the flight-director presses the abort-button, which lights the abort-light in the capsule.
 
-### (F6) Capcom
+### (F6) CAPsule COMmunicator (CAPCOM)
 
 ![](images/capcom-recs.png)
 
-### (F7) Spacecraft Systems
+The CAPCOM is in charge of communicating with the capsule. Realistically, CAPCOM is the only person directly communicating with the capsule, everyone else talks to the capsule through them. CAPCOM can see the current progress of the flight, as well as having a monitor for seeing the launch-pad. 
+
+### (F7) Spacecraft SYSTEMS (SYSTEMS)
 
 ![](images/spacecraft-systems-recs.png)
 
-### (F8) Spacecraft Environment
+SYSTEMS is in charge of monitoring the spacecraft fuel and electrical systems, as well as the attitudes and the rate of change in the individual rotational axes. SYSTEMS shares the responsibility for consumables with [ENVIRONMENT](#f8-spacecraft-environment-environment).
+
+### (F8) Spacecraft ENVIRONMENT (ENVIRONMENT)
 
 ![](images/spacecraft-environment-recs.png)
 
+ENVIRONMENT is the other half of the consumables, and is in charge of monitoring the primary and secondary O2 tanks, as well as the pressure and temperature of the cabin and suit.
 
-### (F9) Flight Dynamics Officer
+### (F9) Flight Dynamics Officer (FDO/FIDO)
 
 ![](images/flight-dynamics-officer-recs.png)
 
+FIDO is in charge of monitoring the orbital parameters of the spacecraft.
 
-### Retrofire controller
+### RETROfire controller (RETRO)
 
 ![](images/retrofire-controller-recs.png)
 
+RETRO is in charge of getting the spacecraft down. If the mission has to be aborted in orbit, it's up to RETRO to reschedule the retrofire-time. This is done by increasing or decreasing the MET timestamp (hours, minutes, and seconds). To do this, RETRO pushes the buttons above (to increase) and below (to decrease), until they reach the wanted retro-time, then press SET to set it.
 
-### Network
+### Network (NETWORK)
 
 ![](images/network-recs.png)
 
+NETWORK is in chargee of managing the communications-network. If Australia out lacks the paper to run their teletype, and CAL lost their radar, it's up to NETWORK to make sure that's shown on the mains. This position is sometimes used by MCC-users humorously write or draw various things on the board.
 
-### Missile Telemetry
+### Missile TELEMETRY (TELEMETRY)
 
 ![](images/missile-telemetry-recs.png)
 
+TELEMETRY is in charge of monitoring the ascent and state of of the booster, making sure the capsule safely gets into space (before vacating the seat). During launch, this means monitoring the pressure of the various chambers, as well as the velocities and altitude of the missile.
 
-
-### Range Safety Observer
+### Range Safety Observer (RSO)
 Effectively INOP
 
-### Support Control Coordinator
+### SUPPORT Control Coordinator (SUPPORT)
 Effectively INOP
 
-### Flight Surgeon
+### Flight SURGEON (SURGEON)
 Effectively INOP
 
-### Spacecraft Environment
-
-![](images/spacecraft-environment-recs.png)
-
-### Recovery
+### RECOVERY
 
 ![](images/recovery-recs.png)
 
-Monitors above height sea-level for recovery
+Monitors above height sea-level for recovery.
