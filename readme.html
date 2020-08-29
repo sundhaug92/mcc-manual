@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>readme.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="reentry-mercury-mission-control-center">Reentry Mercury Mission Control Center</h1>
+<p>Manual version 0.67.0.1-git</p>
+<p>This manual isn't necessarily realistic, and is not crew-rated.</p>
+<h2 id="when-you-enter">When you enter</h2>
+<p>When you enter, you will be looking at the capsule communicator position. For the benefit of this manual, we'll start-out with the CAPCOM-role, since that's where you'll be dropped by default.</p>
+<p><img src="images/capcom-recs.PNG" alt=""></p>
+<p>First, in the white rectangle, you'll see your sign. Whenever you're in a seat, the sign will tell you which seat you're in. Additionally, your position will show up in the chat.</p>
+<p>Second, in the green rectangle, you'll see your status-indicator. This is how you indicate to the flight-controller if you're ready to proceed or not. By default, none of the buttons will be lit. Pressing an unlit button changes the status of the seat. Pressing a lit button turns off the status-report, which can be used to indicate that the seat is vacant. It's recommended that a crewed station is set to amber(yellow, center) outside of GO/NOGO-calls. If something isn't GO on your station, change it to red and call out reason in chat (more on that later).</p>
+<p>Most things are unique to each station. One of these things is the mission state indicator (red rectangle). This is used to tell you where in the mission you are.</p>
+<p>The purple rectangle shows you the current Mission Elapsed Time (MET) and Greenwich Mean Time (GMT). MET shows you how long it is since the launch.</p>
+<p>The buttons in the blue rectangle is used to select camera for the screen in the yellow rectangle. This is used to watch the launch.</p>
+<p>If you want to stay in the CAPCOM-position, please select it in the view-menu so that you're properly seated. If the view-menu isn't visible to you, press V.</p>
+<p>If you look around, you may see the avatars of others. Above the avatars, you'll see their usernames. If you're overlapping with someone, you'll not see them. You can customize your avatar in the profile-part of the game settings-menu.</p>
+<p>It's recommended that the first person to enter MCC temporarily switches to the Flight Director-position to temporarily halt the countdown. See <a href="#f5-flight-director">Flight Director</a> to see how.</p>
+<h3 id="intercom-and-radio-messages">Intercom and radio-messages</h3>
+<p><img src="images/chatroom-recs.png" alt=""></p>
+<p>If you do not have the intercom and radio-messages open, press C. The buttons in the red rectangle allow you to select which rooms you receive messages from, and you can &quot;listen&quot;
+to both rooms at the same time if you want. In this example, the user is receiving messages from the mission control room only. Radio-messages are color-coded so you know which room they're from, with blue for messages in the mission-control room. You'll also notice that the messages also indicate the then-current position of the person. The buttons in the green rectangle allows you to select which room you're sending a message to. Historically, you'd listen to multiple rooms but only speak to capsule if you're CAPCOM, but in MCL that's up to you.</p>
+<h2 id="controls">Controls</h2>
+<p>(Assuming default controls) Arrow-keys are used to walk around without changing seat. Holding the middle mouse button lets you pitch and yaw the view, scroll wheel zooms.</p>
+<p>F1-11 lets you change to some of the views, a list of views is available if you press V, and a chat-window is viewable if you press C.</p>
+<h2 id="views">Views</h2>
+<h3 id="f3-globe">(F3) Globe</h3>
+<h3 id="f5-flight-director">(F5) Flight Director</h3>
+<p><img src="images/flightdirector-recs.png" alt=""></p>
+<p>The flight-director mission-status (green rectangle) is special. It doesn't have an amber button (because if the flight-director doesn't know if they're there you've got bigger problems), and when you press the red button pre-launch you can halt the countdown.</p>
+<p>The red rectangle marks where the flight-director sees the status of each of the seats. In this case, all the seats were unoccupied and so all the lights are unlit. In case of an abort, the flight-director presses the abort-button, which lights the abort-light in the capsule.</p>
+<h3 id="f6-capcom">(F6) Capcom</h3>
+<p><img src="images/capcom-recs.png" alt=""></p>
+<h3 id="f7-spacecraft-systems">(F7) Spacecraft Systems</h3>
+<p><img src="images/spacecraft-systems-recs.png" alt=""></p>
+<h3 id="f8-spacecraft-environment">(F8) Spacecraft Environment</h3>
+<p><img src="images/spacecraft-environment-recs.png" alt=""></p>
+<h3 id="f9-flight-dynamics-officer">(F9) Flight Dynamics Officer</h3>
+<p><img src="images/flight-dynamics-officer-recs.png" alt=""></p>
+<h3 id="retrofire-controller">Retrofire controller</h3>
+<p><img src="images/retrofire-controller-recs.png" alt=""></p>
+<h3 id="network">Network</h3>
+<p><img src="images/network-recs.png" alt=""></p>
+<h3 id="missile-telemetry">Missile Telemetry</h3>
+<p><img src="images/missile-telemetry-recs.png" alt=""></p>
+<h3 id="range-safety-observer">Range Safety Observer</h3>
+<p>Effectively INOP</p>
+<h3 id="support-control-coordinator">Support Control Coordinator</h3>
+<p>Effectively INOP</p>
+<h3 id="flight-surgeon">Flight Surgeon</h3>
+<p>Effectively INOP</p>
+<h3 id="spacecraft-environment">Spacecraft Environment</h3>
+<p><img src="images/spacecraft-environment-recs.png" alt=""></p>
+<h3 id="recovery">Recovery</h3>
+<p><img src="images/recovery-recs.png" alt=""></p>
+<p>Monitors above height sea-level for recovery</p>
+
+</body>
+</html>
