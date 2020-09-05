@@ -1,5 +1,5 @@
 # Reentry Mercury Mission Control Center
-Manual version 0.67.0.1-git
+Manual version 0.67.0.2-git
 
 This manual isn't necessarily realistic, and is not crew-rated.
 
@@ -36,11 +36,20 @@ It's recommended that the first person to enter MCC temporarily switches to the 
 If you do not have the intercom and radio-messages open, press C. The buttons in the red rectangle allow you to select which rooms you receive messages from, and you can "listen"
 to both rooms at the same time if you want. In this example, the user is receiving messages from the mission control room only. Radio-messages are color-coded so you know which room they're from, with blue for messages in the mission-control room. You'll also notice that the messages also indicate the then-current position of the person. The buttons in the green rectangle allows you to select which room you're sending a message to. Historically, you'd listen to multiple rooms but only speak to capsule if you're CAPCOM, but in MCL that's up to you.
 
+![](images/rm-both.png)
+
+On the other hand, if "radio messages" is setup like this, with both "ROOM" and
+"CAPSULE" colored, you'll receive messages for both the MCC and capsule.
+
 ## Controls
 
 (Assuming default controls) Arrow-keys are used to walk around without changing seat. Holding the middle mouse button lets you pitch and yaw the view, scroll wheel zooms.
 
 F1-11 lets you change to some of the views, a list of views is available if you press V, and a chat-window is viewable if you press C.
+
+To trigger the failure-menu, press CTRL+T.
+
+It's advised that you bind chat send to ENTER.
 
 ## Views
 ### (F3) Globe
@@ -50,7 +59,11 @@ F1-11 lets you change to some of the views, a list of views is available if you 
 
 The flight-director mission-status (green rectangle) is special. It doesn't have an amber button (because if the flight-director doesn't know if they're there you've got bigger problems), and when you press the red button pre-launch you can halt the countdown.
 
-The red rectangle marks where the flight-director sees the status of each of the seats. In this case, all the seats were unoccupied and so all the lights are unlit. In case of an abort, the flight-director presses the abort-button, which lights the abort-light in the capsule.
+The red rectangle marks where the flight-director sees the status of each of the seats. In this case, all the seats were unoccupied and so all the lights are unlit. In case of an abort, the flight-director presses the abort-button (purple rectangle), which lights the abort-light in the capsule.
+
+![](images/capcom-2amber.png)
+
+Above you see what the status indicators look like to the flight-director, with both CAPCOM and SYSTEMS present.
 
 ### (F6) CAPsule COMmunicator (CAPCOM)
 
@@ -63,6 +76,8 @@ The CAPCOM is in charge of communicating with the capsule. Realistically, CAPCOM
 ![](images/spacecraft-systems-recs.png)
 
 SYSTEMS is in charge of monitoring the spacecraft fuel and electrical systems, as well as the attitudes and the rate of change in the individual rotational axes. SYSTEMS shares the responsibility for consumables with [ENVIRONMENT](#f8-spacecraft-environment-environment).
+
+In case of an indicator failure aboard the spacecraft, SYSTEMS becomes especially important, as the pilot has to fly partially blind otherwise. To verify indicator functionality, have both SYSTEMS and the pilot give a readout.
 
 ### (F8) Spacecraft ENVIRONMENT (ENVIRONMENT)
 
