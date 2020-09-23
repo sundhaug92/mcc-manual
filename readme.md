@@ -6,7 +6,7 @@ This manual isn't necessarily realistic, and is not crew-rated.
 
 ## Information for the pilot
 
-Upon entering the capsule, press Escape, the Mission Control Live, change the server name etc, and optionally your name, press create room. When the log says "room created", you can press escape again.
+Upon entering the capsule, press Escape, then Mission Control Live, change the server name etc, and optionally your name, press create room. When the log says "room created", you can press escape again.
 
 ## When you enter MCC
 When you enter, you will be looking at the capsule communicator position. For the benefit of this manual, we'll start-out with the CAPCOM-role, since that's where you'll be dropped by default.
