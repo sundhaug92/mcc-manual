@@ -1,5 +1,5 @@
 # Reentry Mercury Mission Control Center
-Manual version 0.67.0.2-git
+Manual version 0.7251.0-git
 
 This manual isn't necessarily realistic, and is not crew-rated.
 
@@ -11,7 +11,7 @@ Upon entering the capsule, press Escape, then Mission Control Live, change the s
 ## When you enter MCC
 When you enter, you will be looking at the capsule communicator position. For the benefit of this manual, we'll start-out with the CAPCOM-role, since that's where you'll be dropped by default.
 
-![](images/capcom-recs.PNG)
+![](images/capcom-recs.png)
 
 First, in the white rectangle, you'll see your sign. Whenever you're in a seat, the sign will tell you which seat you're in. Additionally, your position will show up in the chat.
 
@@ -55,13 +55,13 @@ It's advised that you bind chat send to ENTER.
 ### (F3) Globe
 ### (F5) Flight Director
 
-![](images/flightdirector-recs.png)
+![](images/flight-director-recs.png)
 
 The flight-director mission-status (green rectangle) is special. It doesn't have an amber button (because if the flight-director doesn't know if they're there you've got bigger problems), and when you press the red button pre-launch you can halt the countdown.
 
 The red rectangle marks where the flight-director sees the status of each of the seats. In this case, all the seats were unoccupied and so all the lights are unlit. In case of an abort, the flight-director presses the abort-button (purple rectangle), which lights the abort-light in the capsule.
 
-![](images/capcom-2amber.png)
+![](images/flight-director-2amber.png)
 
 Above you see what the status indicators look like to the flight-director, with both CAPCOM and SYSTEMS present.
 
