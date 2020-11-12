@@ -1,5 +1,7 @@
 # Reentry Mercury Mission Control Center
-Manual version 0.7251.0-git
+Manual version 0.727.0-git
+
+[PDF-version](https://github.com/sundhaug92/mcc-manual/raw/master/readme.pdf)
 
 This manual isn't necessarily realistic, and is not crew-rated.
 
@@ -7,6 +9,8 @@ This manual isn't necessarily realistic, and is not crew-rated.
 ## Information for the pilot
 
 Upon entering the capsule, press Escape, then Mission Control Live, change the server name etc, and optionally your name, press create room. When the log says "room created", you can press escape again.
+
+In the escape-menu, you can see a list of everyone currently in the session, you can give individual users "Troublemaker"-permission, take it away from them, or kick them out of the session.
 
 ## When you enter MCC
 When you enter, you will be looking at the capsule communicator position. For the benefit of this manual, we'll start-out with the CAPCOM-role, since that's where you'll be dropped by default.
@@ -47,7 +51,7 @@ On the other hand, if "radio messages" is setup like this, with both "ROOM" and
 
 F1-11 lets you change to some of the views, a list of views is available if you press V, and a chat-window is viewable if you press C.
 
-To trigger the failure-menu, press CTRL+T.
+To trigger the failure-menu, press CTRL+T. Note that if you haven't been given troublemaker access you can't trigger failures.
 
 It's advised that you bind chat send to ENTER.
 
